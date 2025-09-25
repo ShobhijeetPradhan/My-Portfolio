@@ -1,7 +1,7 @@
 import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/react';
 
 import WelcomeScreen from './pages/WelcomeScreen';
 import Navbar from './components/Navbar';
@@ -31,7 +31,6 @@ function MainLayout() {
         <Portfolio />
         <Contact />
         <Footer />
-        <Analytics />
       </div>
     </main>
   );
@@ -51,6 +50,7 @@ function App() {
 
   return (
     <BrowserRouter>
+     <Analytics />
       <Suspense fallback={<LoadingScreen />}>
         <Routes>
           <Route path="/" element={<MainLayout />} />
