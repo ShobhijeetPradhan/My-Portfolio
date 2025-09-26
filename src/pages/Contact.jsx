@@ -46,7 +46,7 @@ const ContactPage = () => {
     });
 
     try {
-      const formSubmitUrl = 'https://formsubmit.co/shobhijeetpradhan@gmail.com';
+      const formSubmitUrl = 'https://formsubmit.co/20c6366bceb13be83061a71d306cb787';
       
       const submitData = new FormData();
       submitData.append('name', formData.name);
