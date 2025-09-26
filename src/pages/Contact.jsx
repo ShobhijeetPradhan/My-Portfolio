@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Share2, Send, User, Mail, MessageSquare } from "lucide-react"; // Combined and corrected imports
+import { Share2, Send, User, Mail, MessageSquare } from "lucide-react"; 
 import { useNavigate } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks";
 import Comment from "../components/Comment";
@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
-import InputField from '../components/InputField'; // Corrected the path to go up one directory
+import InputField from '../components/InputField'; 
 
 const ContactPage = () => {
   const navigate = useNavigate();

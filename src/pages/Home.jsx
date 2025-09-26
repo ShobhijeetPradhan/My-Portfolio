@@ -4,6 +4,7 @@ import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+// Memoized Components
 const StatusBadge = memo(() => (
   <div className="inline-block animate-float lg:mx-0" data-aos="zoom-in" data-aos-delay="400">
     <div className="relative group">
@@ -92,6 +93,7 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isHovering, setIsHovering] = useState(false)
 
+  // Optimize AOS initialization
   useEffect(() => {
     const initAOS = () => {
       AOS.init({
@@ -111,6 +113,7 @@ const Home = () => {
     return () => setIsLoaded(false);
   }, []);
 
+  // Optimize typing effect
   const handleTyping = useCallback(() => {
     if (isTyping) {
       if (charIndex < WORDS[wordIndex].length) {

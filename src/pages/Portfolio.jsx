@@ -77,6 +77,7 @@ export default function FullWidthTabs() {
     const [showAllProjects, setShowAllProjects] = useState(false);
     const [showAllCertificates, setShowAllCertificates] = useState(false);
 
+    // --- State and Refs for Swiper ---
     const swiperRef = useRef(null);
     const isMobile = useMediaQuery('(max-width: 767px)');
     const initialItems = isMobile ? 4 : 6;
