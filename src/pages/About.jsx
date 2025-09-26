@@ -112,7 +112,6 @@ const StatCard = memo(({ icon: Icon, color, value, label, description, animation
 ));
 
 const AboutPage = () => {
-  // Memoized calculations
   const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
     const storedProjects = JSON.parse(localStorage.getItem("projects") || "[]");
     const storedCertificates = JSON.parse(localStorage.getItem("certificates") || "[]");
@@ -129,7 +128,6 @@ const AboutPage = () => {
     };
   }, []);
 
-  // Optimized AOS initialization
   useEffect(() => {
     const initAOS = () => {
       AOS.init({
@@ -139,7 +137,6 @@ const AboutPage = () => {
 
     initAOS();
     
-    // Debounced resize handler
     let resizeTimer;
     const handleResize = () => {
       clearTimeout(resizeTimer);
@@ -153,7 +150,6 @@ const AboutPage = () => {
     };
   }, []);
 
-  // Memoized stats data
   const statsData = useMemo(() => [
     {
       icon: Code,

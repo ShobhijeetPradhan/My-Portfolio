@@ -3,7 +3,7 @@ import { MessageCircle, UserCircle2, Loader2, AlertCircle, Send, ImagePlus, X, P
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { supabase } from '../supabase';
-import InputField from './InputField'; // Import the new reusable component
+import InputField from './InputField'; 
 
 const Comment = memo(({ comment, formatDate, index, isPinned = false }) => (
     <div 

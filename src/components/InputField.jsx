@@ -20,7 +20,6 @@ const InputField = ({
   const isTextArea = Component === 'textarea';
 
   return (
-    // The main container for positioning
     <div className="relative">
       
       {/* The input or textarea element */}
@@ -38,8 +37,8 @@ const InputField = ({
           focus:outline-none transition-all duration-300
           ${isFocused ? 'border-indigo-500/50' : 'border-white/20'}
           ${isTextArea 
-            ? 'px-12 pt-7 pb-2 h-36 resize-none' // Padding for textarea to make room for the label
-            : 'h-14 px-4 pl-12' // Padding for input
+            ? 'px-12 pt-7 pb-2 h-36 resize-none' 
+            : 'h-14 px-4 pl-12' 
           }
         `}
         {...props}

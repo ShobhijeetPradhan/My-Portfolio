@@ -17,7 +17,7 @@ const AnimatedBackground = () => {
                 window.requestAnimationFrame(() => {
                     const newScroll = window.pageYOffset;
                     blobRefs.current.forEach((blob, index) => {
-                        if (!blob) return; // Guard clause in case a ref isn't set yet
+                        if (!blob) return; 
 
                         const initialPos = initialPositions[index];
                         const xOffset = Math.sin(newScroll / 100 + index * 0.5) * 340;

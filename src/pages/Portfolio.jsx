@@ -35,7 +35,6 @@ const useMediaQuery = (query) => {
 };
 
 
-// --- Your components (ToggleButton, TabPanel, etc.) remain the same ---
 
 const ToggleButton = ({ onClick, isShowingMore }) => (
     <button onClick={onClick} className="px-3 py-1.5 text-slate-300 hover:text-white text-sm font-medium transition-all duration-300 ease-in-out flex items-center gap-2 bg-white/5 hover:bg-white/10 rounded-md border border-white/10 hover:border-white/20 backdrop-blur-sm group relative overflow-hidden">
@@ -78,7 +77,6 @@ export default function FullWidthTabs() {
     const [showAllProjects, setShowAllProjects] = useState(false);
     const [showAllCertificates, setShowAllCertificates] = useState(false);
 
-    // --- State and Refs for Swiper ---
     const swiperRef = useRef(null);
     const isMobile = useMediaQuery('(max-width: 767px)');
     const initialItems = isMobile ? 4 : 6;
@@ -120,7 +118,6 @@ export default function FullWidthTabs() {
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
-        // --- Tell Swiper to slide to the new tab index ---
         if (swiperRef.current) {
             swiperRef.current.slideTo(newValue);
         }
@@ -139,7 +136,6 @@ export default function FullWidthTabs() {
 
     return (
         <div className="md:px-[10%] px-[5%] w-full sm:mt-0 mt-[3rem] overflow-hidden" id="Portfolio">
-            {/* Header section is unchanged */}
             <div className="text-center pb-10" data-aos="fade-up" data-aos-duration="1000">
                 <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
                     Portfolio Showcase
@@ -150,7 +146,6 @@ export default function FullWidthTabs() {
             </div>
 
             <Box sx={{ width: "100%" }}>
-                {/* AppBar and Tabs section is unchanged */}
                 <AppBar position="static" elevation={0} sx={{ bgcolor: "transparent", border: "1px solid rgba(255, 255, 255, 0.1)", borderRadius: "20px", position: "relative", overflow: "hidden", "&::before": { content: '""', position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(139, 92, 246, 0.03) 0%, rgba(59, 130, 246, 0.03) 100%)", backdropFilter: "blur(10px)", zIndex: 0, }, }} className="md:px-4">
                     <Tabs value={value} onChange={handleChange} textColor="secondary" indicatorColor="secondary" variant="fullWidth" sx={{ minHeight: "70px", "& .MuiTab-root": { fontSize: { xs: "0.9rem", md: "1rem" }, fontWeight: "600", color: "#94a3b8", textTransform: "none", transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)", padding: "20px 0", zIndex: 1, margin: "8px", borderRadius: "12px", "&:hover": { color: "#ffffff", backgroundColor: "rgba(139, 92, 246, 0.1)", transform: "translateY(-2px)", "& .lucide": { transform: "scale(1.1) rotate(5deg)" } }, "&.Mui-selected": { color: "#fff", background: "linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(59, 130, 246, 0.2))", boxShadow: "0 4px 15px -3px rgba(139, 92, 246, 0.2)", "& .lucide": { color: "#a78bfa" } }, }, "& .MuiTabs-indicator": { height: 0 }, "& .MuiTabs-flexContainer": { gap: "8px" }, }}>
                         <Tab icon={<Code className="mb-2 w-5 h-5 transition-all duration-300" />} label="Projects" {...a11yProps(0)} />
@@ -159,7 +154,6 @@ export default function FullWidthTabs() {
                     </Tabs>
                 </AppBar>
 
-                {/* --- Swiper Component Replaces SwipeableViews --- */}
                 <Swiper
                     onSwiper={(swiper) => { swiperRef.current = swiper; }}
                     onSlideChange={(swiper) => setValue(swiper.activeIndex)}

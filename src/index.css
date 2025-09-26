@@ -45,7 +45,6 @@ body {
 	animation-delay: 4s;
 }
 
-/* Enhanced Custom Scrollbar Styles */
 ::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
@@ -79,7 +78,6 @@ body {
 	  0 0 15px rgba(99, 102, 241, 0.3);
   }
   
-  /* When scrollbar is in active/clicked state */
   ::-webkit-scrollbar-thumb:active {
 	background: rgba(99, 102, 241, 0.6);
 	border: 1px solid rgba(168, 85, 247, 0.4);
