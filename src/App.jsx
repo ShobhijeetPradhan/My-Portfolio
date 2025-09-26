@@ -11,8 +11,8 @@ import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import AnimatedBackground from './components/Background';
 import Footer from './components/Footer';
-import LoadingScreen from './components/LoadingScreen'; // Our fallback for Suspense
-import { useMediaQuery } from './hooks/useMediaQuery'; // Assuming you have this hook
+import LoadingScreen from './components/LoadingScreen'; 
+import { useMediaQuery } from './hooks/useMediaQuery'; 
 
 const ProjectDetails = lazy(() => import('./components/ProjectDetail'));
 const ThankYouPage = lazy(() => import('./pages/ThankYou')); 
