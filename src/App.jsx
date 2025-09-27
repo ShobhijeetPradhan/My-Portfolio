@@ -16,7 +16,7 @@ import { useMediaQuery } from './hooks/useMediaQuery';
 
 const ProjectDetails = lazy(() => import('./components/ProjectDetail'));
 const ThankYouPage = lazy(() => import('./pages/ThankYou')); 
-const NotFoundPage = lazy(() => import('./pages/404'));
+const NotFoundPage = lazy(() => import('./pages/ErrorPage'));
 
 
 function MainLayout() {
