@@ -113,7 +113,7 @@ const CommentForm = memo(({ onSubmit, isSubmitting, error }) => {
                     placeholder="Enter your name"
                     value={userName}
                     onChange={(e) => setUserName(e.target.value)}
-                    maxLength={15}
+                    // maxLength={15}
                     required
                 />
             </div>
